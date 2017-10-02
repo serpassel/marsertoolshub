@@ -1,6 +1,5 @@
 package es.marser.marsertoolslib.sqliteutils.examples;
 
-import es.marser.marsertoolslib.sqliteutils.SQLStrings;
 import es.marser.marsertoolslib.sqliteutils.annotation.DbColumn;
 import es.marser.marsertoolslib.sqliteutils.annotation.DbColumnInclosed;
 import es.marser.marsertoolslib.sqliteutils.annotation.DbPrimaryKey;
@@ -16,7 +15,7 @@ import es.marser.marsertoolslib.sqliteutils.annotation.DbTable;
  */
 
 @DbTable(name = "users")
-@SuppressWarnings({"unused", "WeakerAccess"})
+@SuppressWarnings({"unused", "WeakerAccess", "UnusedReturnValue"})
 public class PojoExample {
     @DbPrimaryKey
     private String key;

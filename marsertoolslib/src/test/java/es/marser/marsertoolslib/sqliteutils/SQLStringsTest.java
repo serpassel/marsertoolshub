@@ -9,10 +9,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Objects;
 
-import es.marser.marsertoolslib.jbasicutils.SystemColor;
 import es.marser.marsertoolslib.sqliteutils.examples.PojoExample;
 
 import static org.mockito.Mockito.when;
@@ -21,6 +18,7 @@ import static org.mockito.Mockito.when;
  * @author sergio
  *         Created by sergio on 2/10/17.
  */
+@SuppressWarnings("CanBeFinal")
 @RunWith(MockitoJUnitRunner.class)
 public class SQLStringsTest {
 

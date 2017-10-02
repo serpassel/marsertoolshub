@@ -8,7 +8,6 @@ import es.marser.marsertoolslib.jbasicutilstest.BooleanToolsTest;
 import es.marser.marsertoolslib.jbasicutilstest.DateToolsTest;
 import es.marser.marsertoolslib.jbasicutilstest.MathToolsTest;
 import es.marser.marsertoolslib.jbasicutilstest.TextToolsTest;
-import es.marser.marsertoolslib.sqliteutils.SQLStrings;
 import es.marser.marsertoolslib.sqliteutils.SQLStringsTest;
 
 /**
