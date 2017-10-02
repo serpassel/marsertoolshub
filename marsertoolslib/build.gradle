@@ -30,3 +30,122 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.3.1'
 }
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+def siteUrl = 'https://github.com/serpassel/marsertoolshub'      // Homepage URL of the library
+def gitUrl = 'https://github.com/serpassel/marsertoolshub.git'   // Git repository URL
+def libDescription = 'Herramientas para android'
+def gitTag = '0.0.1'
+def pkgName = 'marsertools'
+def libGroupId = "es.marser.marserutils"                                          // Maven Group ID for the artifact
+def libArtifactId = "marsertoolslib"                                          // Maven Group ID for the artifact
+def libName = "marsertoolslib"                                          // Maven Group ID for the artifact
+def libVersion = "0.0.1"// This is the library version used when deploying t
+def repName = "marsertools-rep"
+
+group = libGroupId //bintray org/group name
+version = libVersion //version
+
+
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                groupId libGroupId
+                artifactId libArtifactId
+
+                // Add your description here
+                name libName
+                description libDescription
+                url siteUrl
+
+                // Set your license
+                    licenses {
+                        license {
+                            name 'The Apache Software License, Version 2.0'
+                            url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+
+                developers {
+                    developer {
+                        id 'zergio'
+                        name 'Sergio Pascual'
+                        email 'spseligrat@gmail.com'
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+
+                }
+            }
+        }
+    }
+}
+
+version = libVersion
+
+if (project.hasProperty("android")) { // Android libraries
+    task sourcesJar(type: Jar) {
+        classifier = 'sources'
+        from android.sourceSets.main.java.srcDirs
+    }
+
+    task javadoc(type: Javadoc) {
+        source = android.sourceSets.main.java.srcDirs
+        classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    }
+} else { // Java libraries
+    task sourcesJar(type: Jar, dependsOn: classes) {
+        classifier = 'sources'
+        from sourceSets.main.allSource
+    }
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+
+//Publicación en bintray
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+
+    configurations = ['archives']
+
+    // Package info for BinTray
+    pkg {
+        repo = repName
+        // it is the name that appears in bintray when logged
+        name = pkgName
+        desc = libDescription
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ['Apache-2.0']
+        publish = true
+        publicDownloadNumbers = true
+        version {
+            name = libVersion
+            desc = libDescription
+            released = new Date()
+            vcsTag = gitTag
+        }
+    }
+}
+
+
