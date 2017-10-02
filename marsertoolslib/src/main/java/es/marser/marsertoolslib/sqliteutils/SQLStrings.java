@@ -21,24 +21,24 @@ import es.marser.marsertoolslib.sqliteutils.examples.PojoExample;
  * @author sergio
  *         Created by Sergio on 21/04/2017.
  *         Métodos estáticos para creación de sentencias SQL
- *         <ul>
- *         <il>Estructura de base de datos</il>
- *         <il>Recuperación de datos</il>
- *         <il>Manejo de registros</il>
- *         <il>Filtro y orden</il>
- *         <il>Transformación de clases mapeadas en datos</il>
- *         <il>Transformación de datos en clase mapeadas</il>
- *         </ul>
+ *         
+ *         <p>Estructura de base de datos
+ *         <p>Recuperación de datos
+ *         <p>Manejo de registros
+ *         <p>Filtro y orden
+ *         <p>Transformación de clases mapeadas en datos
+ *         <p>Transformación de datos en clase mapeadas
+ *         
  *         <p>
  *         Static methods for creating SQL statements
- *         <ul>
- *         <il>[EN]  Database structure</il>
- *         <il>[EN]  Data recovery</il>
- *         <il>[EN]  Records Management</il>
- *         <il>[EN]  Filter and Order</il>
- *         <il>[EN]  Transformation of mapped classes into data</il>
- *         <il>[EN]  Transformation of data in mapped class</il>
- *         </ul>
+ *         
+ *         <p>[EN]  Database structure
+ *         <p>[EN]  Data recovery
+ *         <p>[EN]  Records Management
+ *         <p>[EN]  Filter and Order
+ *         <p>[EN]  Transformation of mapped classes into data
+ *         <p>[EN]  Transformation of data in mapped class
+ *         
  */
 
 @SuppressWarnings({"WeakerAccess", "unused"})
@@ -46,7 +46,7 @@ public abstract class SQLStrings {
 
     /**
      * Enumeración de campos de autocreación
-     * <p></p>
+     * <p>
      * [EN]  Enumeration of self-creation fields
      */
     public enum inclosed {
@@ -71,12 +71,10 @@ public abstract class SQLStrings {
      * <p>
      * [EN]  Creating tables by java reflection. Creates the table if it does not exist
      * <p>
-     * <ul>
-     * <il>Nombre de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbTable} [EN]  Name of table</il>
-     * <il>Clave primaria {@link es.marser.marsertoolslib.sqliteutils.annotation.DbPrimaryKey} [EN]  Primary Key</il>
-     * <il>Campos de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbColumn} [EN] Table Fields</il>
-     * <il>Campos autocreados {@link es.marser.marsertoolslib.sqliteutils.annotation.DbTable} [EN] Self-created fields</il>
-     * </ul>
+     * <p>Nombre de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbTable} [EN]  Name of table
+     * <p>Clave primaria {@link es.marser.marsertoolslib.sqliteutils.annotation.DbPrimaryKey} [EN]  Primary Key
+     * <p>Campos de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbColumn} [EN] Table Fields
+     * <p>Campos autocreados {@link es.marser.marsertoolslib.sqliteutils.annotation.DbTable} [EN] Self-created fields
      *
      * @param obj POJO mapeado [EN] [EN]  mapped POJO
      * @return Sentencia SQL de creación de tablas [EN]  SQL table creation statement
@@ -146,7 +144,7 @@ public abstract class SQLStrings {
      * Crea la sentencia de eliminación de una tabla
      * <p>
      * [EN]  Creates the delete statement for a table
-     * Nombre de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbTable} [EN]  Name of table</il>
+     * Nombre de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbTable} [EN]  Name of table
      *
      * @param obj POJO mapeado [EN] mapped POJO
      * @return Sentencia SQL de eliminación de tablas [EN] SQL statement of drop tables
@@ -202,10 +200,8 @@ public abstract class SQLStrings {
      * Lista las nuevas columnas a añadir según la versión mapeada
      * <p>
      * [EN]  List the new columns to be added according to the mapped version
-     * <ul>
-     * <il>Nombre de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbTable} [EN]  Name of table</il>
-     * <il>Campos de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbColumn} [EN] Table Fields</il>
-     * </ul>
+     * Nombre de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbTable} [EN]  Name of table
+     * Campos de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbColumn} [EN] Table Fields
      *
      * @param obj        POJO mapeado <p> [EN]  POJO mapeado
      * @param oldversion versión de la base de datos anterior <p>[EN]  version of the previous database
@@ -229,9 +225,8 @@ public abstract class SQLStrings {
      * Crea la sentencia SQl para agregar un columna a una tabla, por métodos de reflexión
      * <p>
      * [EN]  Creates the SQl statement to add a column to a table, by reflection methods
-     * <ul>
-     * <il>Campos de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbColumn} [EN] Table Fields</il>
-     * </ul>
+     * <p>
+     * Campos de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbColumn} [EN] Table Fields
      *
      * @param tableName nombre de la tabla <p>[EN]  table name
      * @param field     campo a agregar <p>[EN]  field to add
@@ -271,9 +266,7 @@ public abstract class SQLStrings {
      * Recupera todos los registros de una tabla
      * <p>
      * [EN]  Recovers all records in a table
-     * <ul>
-     * <il>Nombre de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbTable} [EN]  Name of table</il>
-     * </ul>
+     * <p>Nombre de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbTable} [EN]  Name of table
      *
      * @param cls Clase mapeada [EN]  SQl statement for reading all records
      * @return Sentencia SQl para lectura de todos los registros [EN]  SQl statement for reading all records
@@ -292,9 +285,7 @@ public abstract class SQLStrings {
      * <p>
      * [EN]  Generates primary keyword search clause. [EN]  Add to select statement
      * <p>
-     * <ul>
-     * <il>Clave primaria {@link es.marser.marsertoolslib.sqliteutils.annotation.DbPrimaryKey} [EN]  Primary Key</il>
-     * </ul>
+     * Clave primaria {@link es.marser.marsertoolslib.sqliteutils.annotation.DbPrimaryKey} [EN]  Primary Key
      *
      * @param key Valor de la clave primaria [EN]  Primary Key Value
      * @param cls Clase mapeada [EN]  Primary Key Value
@@ -329,9 +320,7 @@ public abstract class SQLStrings {
      * <p>
      * [EN]  Creates a statement by the parent key.  Add to selection statement
      * <p>
-     * <ul>
-     * <il>Campos de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbColumn} [EN] Table Fields</il>
-     * </ul>
+     * Campos de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbColumn} [EN] Table Fields
      *
      * @param parentKey Índice de registro padre [EN]  Parent Registration Index
      * @param cls       Clase mapeada [EN]  Mapped class
@@ -366,12 +355,10 @@ public abstract class SQLStrings {
      * Crea sentencia SQL para inserción del registro
      * <p>
      * [EN]  Create SQL statement for record insertion
-     * <ul>
-     * <il>Nombre de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbTable} [EN]  Name of table</il>
-     * <il>Clave primaria {@link es.marser.marsertoolslib.sqliteutils.annotation.DbPrimaryKey} [EN]  Primary Key</il>
-     * <il>Campos de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbColumn} [EN] Table Fields</il>
-     * <il>Campos autocreados {@link es.marser.marsertoolslib.sqliteutils.annotation.DbTable} [EN] Self-created fields</il>
-     * </ul>
+     * <p>Nombre de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbTable} [EN]  Name of table
+     * <p>Clave primaria {@link es.marser.marsertoolslib.sqliteutils.annotation.DbPrimaryKey} [EN]  Primary Key
+     * <p>Campos de la tabla {@link es.marser.marsertoolslib.sqliteutils.annotation.DbColumn} [EN] Table Fields
+     * <p>Campos autocreados {@link es.marser.marsertoolslib.sqliteutils.annotation.DbTable} [EN] Self-created fields
      *
      * @param obj Objecto mapeado [EN]  Mapped object
      * @return Sentencia SQL de inserción de datos [EN]  SQL statement of data insertion
@@ -851,7 +838,7 @@ public abstract class SQLStrings {
 
     /**
      * Selección del tipo de campo SQLite según el valor a registrar
-     * <ul>
+     *<ul>
      * <li>String</li>
      * <li>double</li>
      * <li>Double</li>
@@ -972,13 +959,12 @@ public abstract class SQLStrings {
      * <p>
      * [EN]  Retrieves the data of a column of the data table and sets a variable of the mapped object
      *
-     * @param obj variable de la clase [EN]  class variable
-     * @param rs cursor de datos [EN]  data cursor
-     * @param f1 campo de la clase [EN]  class field
+     * @param obj      variable de la clase [EN]  class variable
+     * @param rs       cursor de datos [EN]  data cursor
+     * @param f1       campo de la clase [EN]  class field
      * @param colindex índice de la columna [EN]  column index
-     *
      * @throws IllegalAccessException no se puede acceder al método [EN]  can not access method
-     * @throws NoSuchFieldError no se ha localizado el campo [EN]  field has not been located
+     * @throws NoSuchFieldError       no se ha localizado el campo [EN]  field has not been located
      */
     private static void setColumnByReflection(Object obj, Cursor rs, Field f1, int colindex)
             throws IllegalAccessException, NoSuchFieldError {
@@ -1038,12 +1024,9 @@ public abstract class SQLStrings {
      *
      * @param rs  Cursor con datos [EN]  Cursor with data
      * @param cls Clase mapeada a generar [EN]  Mapped class to generate
-     *
      * @return Objeto sin indentificar con los valores del registro [EN]  Unidentified object with registry values
-     *
      * @throws IllegalAccessException no se puede acceder al método [EN]  can not access method
      * @throws InstantiationException no tiene constructores instaciables [EN]  does not have installable builders
-     *
      * @deprecated Replaced by  {@link #getGenericByReflection(Cursor, Class)}
      */
     @Deprecated
@@ -1084,9 +1067,8 @@ public abstract class SQLStrings {
      *
      * @param rs  Cursor con datos [EN]  Cursor with data
      * @param cls Clase mapeada a generar [EN]  Mapped class to generate
-     *
+     * @param <T> Definición de clase genérica [EN]  Generic class definition
      * @return Objeto de entrada genérico con los valores del registro [EN]  Entry object with registry values
-     *
      * @throws IllegalAccessException no se puede acceder al método [EN]  can not access method
      * @throws InstantiationException no tiene constructores instaciables [EN]  does not have installable builders
      */

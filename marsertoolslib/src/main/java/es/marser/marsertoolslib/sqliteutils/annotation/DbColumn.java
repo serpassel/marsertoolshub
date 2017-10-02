@@ -24,7 +24,6 @@ public @interface DbColumn {
      * Define el nombre del campo de la tabla. Debe de coincidir con el nombre de la variable del POJO
      * <p>
      * [EN]  Defines the field name of the table.  It must match the name of the POJO variabl
-     * <code>&amp@DbColum(col_named(title))<p>private String title;</code>
      *
      * @return Nombre del campo <p>[EN]  Field Name
      */
