@@ -1,4 +1,4 @@
-package es.marser.marsertoolslib;
+package es.marser.marsertoolslib.jbasicutilstest;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -19,6 +19,7 @@ import es.marser.marsertoolslib.jbasicutils.DateTools;
  *         [EN]
  *         DateTools Functional Check
  */
+@SuppressWarnings("CanBeFinal")
 public class DateToolsTest {
 
     private GregorianCalendar in = new GregorianCalendar();

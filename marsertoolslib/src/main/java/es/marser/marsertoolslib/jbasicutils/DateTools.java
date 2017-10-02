@@ -460,7 +460,6 @@ public abstract class DateTools {
      */
     public static int countTheDayOfTheWeek(GregorianCalendar start, GregorianCalendar end, int dayoftheweek) {
         int counter = 0;
-        int analize = 1;
         /*Si es el mismo día devolvemos 0
        * [EN] If it is the same day we return 0*/
         if (sameDay(start, end) || dayoftheweek < 1 || dayoftheweek > 7) {
@@ -599,6 +598,7 @@ public abstract class DateTools {
     /**
      * Par de fechas [EN]  Pair of dates
      */
+    @SuppressWarnings("CanBeFinal")
     public static class Pair {
         public GregorianCalendar start;
         public GregorianCalendar end;

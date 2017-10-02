@@ -1,5 +1,17 @@
 apply plugin: 'com.android.library'
 
+def siteUrl = 'https://github.com/serpassel/marsertoolshub'      // Homepage URL of the library
+def gitUrl = 'https://github.com/serpassel/marsertoolshub.git'   // Git repository URL
+def libDescription = 'Herramientas para android'
+def gitTag = '0.0.1'
+def pkgName = 'marsertools'
+def libGroupId = "es.marser.marserutils"                                          // Maven Group ID for the artifact
+def libArtifactId = "marsertoolslib"                                          // Maven Group ID for the artifact
+def libName = "marsertoolslib"                                          // Maven Group ID for the artifact
+def libVersion = gitTag// This is the library version used when deploying t
+def repName = "marsertools-rep"
+
+
 android {
     compileSdkVersion 25
     buildToolsVersion '25.0.2'
@@ -7,7 +19,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName = libVersion
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -33,17 +45,6 @@ dependencies {
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 
-def siteUrl = 'https://github.com/serpassel/marsertoolshub'      // Homepage URL of the library
-def gitUrl = 'https://github.com/serpassel/marsertoolshub.git'   // Git repository URL
-def libDescription = 'Herramientas para android'
-def gitTag = '0.0.1'
-def pkgName = 'marsertools'
-def libGroupId = "es.marser.marserutils"                                          // Maven Group ID for the artifact
-def libArtifactId = "marsertoolslib"                                          // Maven Group ID for the artifact
-def libName = "marsertoolslib"                                          // Maven Group ID for the artifact
-def libVersion = "0.0.1"// This is the library version used when deploying t
-def repName = "marsertools-rep"
-
 group = libGroupId //bintray org/group name
 version = libVersion //version
 
@@ -63,12 +64,12 @@ install {
                 url siteUrl
 
                 // Set your license
-                    licenses {
-                        license {
-                            name 'The Apache Software License, Version 2.0'
-                            url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                        }
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
                     }
+                }
 
                 developers {
                     developer {
@@ -116,7 +117,6 @@ artifacts {
     archives javadocJar
     archives sourcesJar
 }
-
 
 //Publicación en bintray
 Properties properties = new Properties()

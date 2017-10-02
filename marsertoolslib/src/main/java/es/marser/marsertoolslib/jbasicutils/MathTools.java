@@ -804,7 +804,7 @@ public abstract class MathTools {
             }
 
             /*Eliminacion de `impurezas´ en la expresiones algebraicas [EN]  Elimination of 'impurities' in algebraic expressions*/
-            String infix = expr.replace(" ", "");
+           // String infix = expr.replace(" ", "");
             postfix = S.toString().replaceAll("[\\]\\[,]", "");
         } catch (Exception ex) {
             System.out.println("Error en la expresión algebraica");

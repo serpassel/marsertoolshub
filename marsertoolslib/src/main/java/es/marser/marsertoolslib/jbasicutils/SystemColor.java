@@ -4,7 +4,7 @@ package es.marser.marsertoolslib.jbasicutils;
  * Created by Sergio on 27/08/2017.
  * Colores para la consola
  */
-@SuppressWarnings({"unused"})
+@SuppressWarnings("ALL")
 public abstract class SystemColor {
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLACK = "\u001B[30m";

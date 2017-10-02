@@ -1,4 +1,4 @@
-package es.marser.marsertoolslib;
+package es.marser.marsertoolslib.jbasicutilstest;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,6 +10,7 @@ import es.marser.marsertoolslib.jbasicutils.TextTools;
  *         Created by sergio on 23/09/17.
  *         Funcional de clase estática
  */
+@SuppressWarnings("CanBeFinal")
 public class TextToolsTest {
 
     private String in = "prueba";

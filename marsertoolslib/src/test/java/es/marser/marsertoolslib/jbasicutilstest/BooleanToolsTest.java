@@ -1,4 +1,4 @@
-package es.marser.marsertoolslib;
+package es.marser.marsertoolslib.jbasicutilstest;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -8,6 +8,7 @@ import es.marser.marsertoolslib.jbasicutils.TextTools;
  *         Pruebas de compilación de librerías
  */
 
+@SuppressWarnings({"ALL", "unused"})
 public class Compilacion {
 
     public void init() {

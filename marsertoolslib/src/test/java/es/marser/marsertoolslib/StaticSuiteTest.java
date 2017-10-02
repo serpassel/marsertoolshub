@@ -4,6 +4,11 @@ package es.marser.marsertoolslib;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
+import es.marser.marsertoolslib.jbasicutilstest.BooleanToolsTest;
+import es.marser.marsertoolslib.jbasicutilstest.DateToolsTest;
+import es.marser.marsertoolslib.jbasicutilstest.MathToolsTest;
+import es.marser.marsertoolslib.jbasicutilstest.TextToolsTest;
+
 /**
  * @author sergio
  *         Created by sergio on 23/09/17.
