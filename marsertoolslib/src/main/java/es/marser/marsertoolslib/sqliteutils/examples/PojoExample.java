@@ -1,6 +1,8 @@
 package es.marser.marsertoolslib.sqliteutils.examples;
 
+import es.marser.marsertoolslib.sqliteutils.SQLStrings;
 import es.marser.marsertoolslib.sqliteutils.annotation.DbColumn;
+import es.marser.marsertoolslib.sqliteutils.annotation.DbColumnInclosed;
 import es.marser.marsertoolslib.sqliteutils.annotation.DbPrimaryKey;
 import es.marser.marsertoolslib.sqliteutils.annotation.DbTable;
 
@@ -22,6 +24,12 @@ public class PojoExample {
     private String name;
     @DbColumn(col_name = "age")
     private String age;
+
+    @DbColumnInclosed(col_name = "creacion")
+    private String creacion;
+
+    @DbColumnInclosed(col_name = "modificacion")
+    private String modificacion;
 
     public PojoExample() {
     }
@@ -49,6 +57,24 @@ public class PojoExample {
 
     public PojoExample setAge(String age) {
         this.age = age;
+        return this;
+    }
+
+    public String getCreacion() {
+        return creacion;
+    }
+
+    public PojoExample setCreacion(String creacion) {
+        this.creacion = creacion;
+        return this;
+    }
+
+    public String getModificacion() {
+        return modificacion;
+    }
+
+    public PojoExample setModificacion(String modificacion) {
+        this.modificacion = modificacion;
         return this;
     }
 

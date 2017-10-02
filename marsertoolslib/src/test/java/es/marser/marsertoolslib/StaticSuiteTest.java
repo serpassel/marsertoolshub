@@ -8,6 +8,8 @@ import es.marser.marsertoolslib.jbasicutilstest.BooleanToolsTest;
 import es.marser.marsertoolslib.jbasicutilstest.DateToolsTest;
 import es.marser.marsertoolslib.jbasicutilstest.MathToolsTest;
 import es.marser.marsertoolslib.jbasicutilstest.TextToolsTest;
+import es.marser.marsertoolslib.sqliteutils.SQLStrings;
+import es.marser.marsertoolslib.sqliteutils.SQLStringsTest;
 
 /**
  * @author sergio
@@ -20,7 +22,8 @@ import es.marser.marsertoolslib.jbasicutilstest.TextToolsTest;
         TextToolsTest.class,
         DateToolsTest.class,
         BooleanToolsTest.class,
-        MathToolsTest.class
+        MathToolsTest.class,
+        SQLStringsTest.class
 })
 public class StaticSuiteTest {
 

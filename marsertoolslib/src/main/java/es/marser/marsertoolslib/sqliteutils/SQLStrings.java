@@ -234,7 +234,7 @@ public abstract class SQLStrings {
      * @see es.marser.marsertoolslib.sqliteutils.annotation
      */
 
-    public static String addColumn(String tableName, Field field) {
+    private static String addColumn(String tableName, Field field) {
         StringBuilder builder = new StringBuilder();
         Annotation a = field.getAnnotation(DbColumn.class);
         if (a != null) {
@@ -857,7 +857,7 @@ public abstract class SQLStrings {
      * @param cls Clase de valor del campo [EN]  Value class of the field
      * @return Nombre del campo en SQLite [EN]  Field Name in SQLite
      */
-    private static String getDbCastName(Class cls) {
+    public static String getDbCastName(Class cls) {
         switch (cls.getSimpleName()) {
             case "String":
                 return "TEXT";
